@@ -37,8 +37,8 @@ RCT_EXPORT_METHOD(toJson:(NSString *)XMLString callback:(RCTResponseSenderBlock)
         callback(@[error.localizedDescription]);
     } else {
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        callback(@[jsonString]);
         NSLog(@"%@",jsonString);
+        callback(@[jsonString]);
     }
 }
 
