@@ -15,12 +15,13 @@
 #import "RCTUIManager.h"
 #import "RCTEventDispatcher.h"
 
+
 @implementation RCTXml2Json
 
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(toJson:(NSString XMLString) (RCTResponseSenderBlock) callback)
+RCT_EXPORT_METHOD(toJson:(NSString *)XMLString callback:(RCTResponseSenderBlock)callback)
 {
     NSError *parseError = nil;
     NSDictionary *xmlDictionary = [XMLReader dictionaryForXMLString:XMLString error:&parseError];
