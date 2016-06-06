@@ -1,5 +1,5 @@
 //
-//  XMLReader.m
+//  RCTXMLReader.m
 //  RCTXml2Json
 //
 //  Created by Alexandru Lazar on 6/6/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "XMLReader.h"
+#import "RCTXMLReader.h"
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
 #error "XMLReader requires ARC support."
@@ -17,7 +17,7 @@
 NSString *const kXMLReaderTextNodeKey		= @"text";
 NSString *const kXMLReaderAttributePrefix	= @"@";
 
-@interface XMLReader ()
+@interface RCTXMLReader ()
 
 @property (nonatomic, strong) NSMutableArray *dictionaryStack;
 @property (nonatomic, strong) NSMutableString *textInProgress;
@@ -26,13 +26,13 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
 @end
 
 
-@implementation XMLReader
+@implementation RCTXMLReader
 
 #pragma mark - Public methods
 
 + (NSDictionary *)dictionaryForXMLData:(NSData *)data error:(NSError **)error
 {
-    XMLReader *reader = [[XMLReader alloc] initWithError:error];
+    RCTXMLReader *reader = [[RCTXMLReader alloc] initWithError:error];
     NSDictionary *rootDictionary = [reader objectWithData:data options:0];
     return rootDictionary;
 }
@@ -40,20 +40,20 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
 + (NSDictionary *)dictionaryForXMLString:(NSString *)string error:(NSError **)error
 {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    return [XMLReader dictionaryForXMLData:data error:error];
+    return [RCTXMLReader dictionaryForXMLData:data error:error];
 }
 
-+ (NSDictionary *)dictionaryForXMLData:(NSData *)data options:(XMLReaderOptions)options error:(NSError **)error
++ (NSDictionary *)dictionaryForXMLData:(NSData *)data options:(RCTXMLReaderOptions)options error:(NSError **)error
 {
-    XMLReader *reader = [[XMLReader alloc] initWithError:error];
+    RCTXMLReader *reader = [[RCTXMLReader alloc] initWithError:error];
     NSDictionary *rootDictionary = [reader objectWithData:data options:options];
     return rootDictionary;
 }
 
-+ (NSDictionary *)dictionaryForXMLString:(NSString *)string options:(XMLReaderOptions)options error:(NSError **)error
++ (NSDictionary *)dictionaryForXMLString:(NSString *)string options:(RCTXMLReaderOptions)options error:(NSError **)error
 {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    return [XMLReader dictionaryForXMLData:data options:options error:error];
+    return [RCTXMLReader dictionaryForXMLData:data options:options error:error];
 }
 
 
@@ -69,7 +69,7 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
     return self;
 }
 
-- (NSDictionary *)objectWithData:(NSData *)data options:(XMLReaderOptions)options
+- (NSDictionary *)objectWithData:(NSData *)data options:(RCTXMLReaderOptions)options
 {
     // Clear out any old data
     self.dictionaryStack = [[NSMutableArray alloc] init];
@@ -81,9 +81,9 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
     // Parse the XML
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
     
-    [parser setShouldProcessNamespaces:(options & XMLReaderOptionsProcessNamespaces)];
-    [parser setShouldReportNamespacePrefixes:(options & XMLReaderOptionsReportNamespacePrefixes)];
-    [parser setShouldResolveExternalEntities:(options & XMLReaderOptionsResolveExternalEntities)];
+    [parser setShouldProcessNamespaces:(options & RCTXMLReaderOptionsProcessNamespaces)];
+    [parser setShouldReportNamespacePrefixes:(options & RCTXMLReaderOptionsReportNamespacePrefixes)];
+    [parser setShouldResolveExternalEntities:(options & RCTXMLReaderOptionsResolveExternalEntities)];
     
     parser.delegate = self;
     BOOL success = [parser parse];

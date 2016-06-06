@@ -6,8 +6,8 @@
 //  Copyright © 2016 Alexandru Lazar. All rights reserved.
 //
 
-#import "XMLReader.h"
 #import "RCTXml2Json.h"
+#import "RCTXMLReader.h"
 #import "RCTConvert.h"
 #import "RCTLog.h"
 #import "RCTUtils.h"
@@ -24,7 +24,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(toJson:(NSString *)XMLString callback:(RCTResponseSenderBlock)callback)
 {
     NSError *parseError = nil;
-    NSDictionary *xmlDictionary = [XMLReader dictionaryForXMLString:XMLString error:&parseError];
+    NSDictionary *xmlDictionary = [RCTXMLReader dictionaryForXMLString:XMLString error:&parseError];
     NSLog(@" %@", xmlDictionary);
     
     NSError *error;

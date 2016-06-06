@@ -9,19 +9,8 @@
 /* Begin PBXBuildFile section */
 		7397D7561D05CA5A007325C2 /* RCTXml2Json.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7397D7551D05CA5A007325C2 /* RCTXml2Json.h */; };
 		7397D7581D05CA5A007325C2 /* RCTXml2Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397D7571D05CA5A007325C2 /* RCTXml2Json.m */; };
-		7397D7611D05CD1D007325C2 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397D7601D05CD1D007325C2 /* XMLReader.m */; };
-		7397D7761D05E328007325C2 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7397D7751D05E328007325C2 /* libReact.a */; };
+		7397D7611D05CD1D007325C2 /* RCTXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397D7601D05CD1D007325C2 /* RCTXMLReader.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7397D7891D0603FF007325C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7397D76E1D05E12B007325C2 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
-			remoteInfo = React;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7397D7501D05CA5A007325C2 /* CopyFiles */ = {
@@ -40,10 +29,8 @@
 		7397D7521D05CA5A007325C2 /* libRCTXml2Json.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTXml2Json.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7397D7551D05CA5A007325C2 /* RCTXml2Json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTXml2Json.h; sourceTree = "<group>"; };
 		7397D7571D05CA5A007325C2 /* RCTXml2Json.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTXml2Json.m; sourceTree = "<group>"; };
-		7397D75F1D05CCC9007325C2 /* XMLReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
-		7397D7601D05CD1D007325C2 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
-		7397D76E1D05E12B007325C2 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		7397D7751D05E328007325C2 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/build/Debug-iphoneos/libReact.a"; sourceTree = "<group>"; };
+		7397D75F1D05CCC9007325C2 /* RCTXMLReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTXMLReader.h; sourceTree = "<group>"; };
+		7397D7601D05CD1D007325C2 /* RCTXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTXMLReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7397D7761D05E328007325C2 /* libReact.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,10 +47,8 @@
 		7397D7491D05CA5A007325C2 = {
 			isa = PBXGroup;
 			children = (
-				7397D7751D05E328007325C2 /* libReact.a */,
 				7397D7541D05CA5A007325C2 /* RCTXml2Json */,
 				7397D7531D05CA5A007325C2 /* Products */,
-				7397D76E1D05E12B007325C2 /* React.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,18 +65,10 @@
 			children = (
 				7397D7551D05CA5A007325C2 /* RCTXml2Json.h */,
 				7397D7571D05CA5A007325C2 /* RCTXml2Json.m */,
-				7397D75F1D05CCC9007325C2 /* XMLReader.h */,
-				7397D7601D05CD1D007325C2 /* XMLReader.m */,
+				7397D75F1D05CCC9007325C2 /* RCTXMLReader.h */,
+				7397D7601D05CD1D007325C2 /* RCTXMLReader.m */,
 			);
 			path = RCTXml2Json;
-			sourceTree = "<group>";
-		};
-		7397D7861D0603FE007325C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7397D78A1D0603FF007325C2 /* libReact.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,12 +115,6 @@
 			mainGroup = 7397D7491D05CA5A007325C2;
 			productRefGroup = 7397D7531D05CA5A007325C2 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7397D7861D0603FE007325C2 /* Products */;
-					ProjectRef = 7397D76E1D05E12B007325C2 /* React.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7397D7511D05CA5A007325C2 /* RCTXml2Json */,
@@ -152,22 +122,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		7397D78A1D0603FF007325C2 /* libReact.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libReact.a;
-			remoteRef = 7397D7891D0603FF007325C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7397D74E1D05CA5A007325C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7397D7611D05CD1D007325C2 /* XMLReader.m in Sources */,
+				7397D7611D05CD1D007325C2 /* RCTXMLReader.m in Sources */,
 				7397D7581D05CA5A007325C2 /* RCTXml2Json.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +172,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -262,7 +222,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
+					"$(SRCROOT)/../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
@@ -276,7 +236,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
+					"$(SRCROOT)/../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
