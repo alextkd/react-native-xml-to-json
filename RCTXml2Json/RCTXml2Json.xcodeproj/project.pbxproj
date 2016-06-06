@@ -227,7 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/React.xcodeproj";
+				HEADER_SEARCH_PATHS = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -238,7 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/React.xcodeproj";
+				HEADER_SEARCH_PATHS = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
