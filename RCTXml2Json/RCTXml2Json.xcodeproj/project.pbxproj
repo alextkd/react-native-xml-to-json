@@ -263,7 +263,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
-					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,7 +277,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
-					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
