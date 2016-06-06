@@ -1,0 +1,37 @@
+{
+  "name": "react-native-xml-to-json",
+  "version": "1.0.0",
+  "description": "React Native XML to JSON Convertor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alextkd/react-native-xml-to-json"
+  },
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "react-native-xml-to-json",
+    "react-components",
+    "react-component",
+    "ios",
+    "android",
+    "flux",
+    "router",
+    "message"
+  ],
+  "author": {
+    "name": "Alexandru Lazar",
+    "email": "alextkd123@yahoo.com",
+    "url": "http://moduscreate.com"
+  },
+  "license": "ISC",
+  "contributors": [
+    {
+      "name": "alextkd",
+      "email": "alextkd123@yahoo.com"
+    },
+    {
+      "name": "dorin-BSFT",
+      "email": "dorin.danciu@moduscreate.com"
+    }
+  ]
+}
