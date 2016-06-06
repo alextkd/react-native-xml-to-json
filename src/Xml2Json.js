@@ -9,7 +9,7 @@ import {
 let RCTXml2Json = NativeModules.Xml2Json;
 
 /**
-* MessageUI class to handle native message intialization
+* XML to JSON parser with native bridge
 */
 let Xml2Json = {
     /**
