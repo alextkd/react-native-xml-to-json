@@ -13,6 +13,16 @@
 		7397D7761D05E328007325C2 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7397D7751D05E328007325C2 /* libReact.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7397D7891D0603FF007325C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7397D76E1D05E12B007325C2 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		7397D7501D05CA5A007325C2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -77,6 +87,14 @@
 			path = RCTXml2Json;
 			sourceTree = "<group>";
 		};
+		7397D7861D0603FE007325C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7397D78A1D0603FF007325C2 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,12 +139,28 @@
 			mainGroup = 7397D7491D05CA5A007325C2;
 			productRefGroup = 7397D7531D05CA5A007325C2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7397D7861D0603FE007325C2 /* Products */;
+					ProjectRef = 7397D76E1D05E12B007325C2 /* React.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7397D7511D05CA5A007325C2 /* RCTXml2Json */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7397D78A1D0603FF007325C2 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 7397D7891D0603FF007325C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7397D74E1D05CA5A007325C2 /* Sources */ = {
@@ -227,7 +261,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -238,7 +275,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../broadsoft/ReactNative-iOS/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
